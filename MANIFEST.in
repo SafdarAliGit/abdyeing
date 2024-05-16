@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include abdyeing *.css
+recursive-include abdyeing *.csv
+recursive-include abdyeing *.html
+recursive-include abdyeing *.ico
+recursive-include abdyeing *.js
+recursive-include abdyeing *.json
+recursive-include abdyeing *.md
+recursive-include abdyeing *.png
+recursive-include abdyeing *.py
+recursive-include abdyeing *.svg
+recursive-include abdyeing *.txt
+recursive-exclude abdyeing *.pyc
