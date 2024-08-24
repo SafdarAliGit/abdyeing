@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:P-{DD}-{MM}-{YY}-{####}",
+ "creation": "2024-08-24 08:17:40.162186",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "program_no",
+  "column_break_tkhma",
+  "processes",
+  "customer",
+  "section_break_lec7y",
+  "program_item",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "program_no",
+   "fieldtype": "Data",
+   "label": "Program No"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "program_item",
+   "fieldtype": "Table",
+   "label": "Program Item",
+   "options": "Program Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Program",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "processes",
+   "fieldtype": "Link",
+   "label": "Processes",
+   "options": "Operation"
+  },
+  {
+   "fieldname": "column_break_tkhma",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lec7y",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-24 08:41:37.396650",
+ "modified_by": "Administrator",
+ "module": "AB Dyeing",
+ "name": "Program",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
