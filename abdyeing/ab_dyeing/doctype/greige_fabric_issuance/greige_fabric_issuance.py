@@ -1,8 +1,23 @@
 # Copyright (c) 2024, TechVentures and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 
+
 class GreigeFabricIssuance(Document):
-	pass
+    def on_submit(self):
+        se = frappe.new_doc("Stock Entry")
+        se.stock_entry_type = 'Material Transfer'
+        for item in self.greige_fabric_issuance_item:
+            it = se.append("items", {})
+            it.s_warehouse = self.source_warehouse
+            it.t_warehouse = 'Work In Progress - ABD'
+            it.item_code = item.item_code
+            it.qty = item.qty_issue
+            it.batch_no = item.fabric_lot_no
+
+        try:
+            se.submit()
+        except Exception as e:
+            frappe.throw(str(e))

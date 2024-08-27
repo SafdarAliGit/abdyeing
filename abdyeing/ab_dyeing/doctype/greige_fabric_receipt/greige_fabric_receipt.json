@@ -16,7 +16,8 @@
   "vehicle_no",
   "section_break_drzax",
   "greige_fabric_receipt_item",
-  "amended_from"
+  "amended_from",
+  "total_meters"
  ],
  "fields": [
   {
@@ -69,12 +70,19 @@
    "fieldtype": "Table",
    "label": "Greige Fabric Receipt Item",
    "options": "Greige Fabric Receipt Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_meters",
+   "fieldtype": "Float",
+   "label": "Total Meters",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-24 09:14:29.437491",
+ "modified": "2024-08-25 08:20:13.895039",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Greige Fabric Receipt",

@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "fabric_lot_no",
+  "item_code",
   "available_qty",
   "qty_issue",
   "uom"
@@ -17,13 +18,15 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Fabric lot No",
-   "options": "Item"
+   "options": "Batch"
   },
   {
+   "fetch_from": "fabric_lot_no.batch_qty",
    "fieldname": "available_qty",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Available Qty"
+   "label": "Available Qty",
+   "read_only": 1
   },
   {
    "fieldname": "qty_issue",
@@ -37,12 +40,21 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Uom"
+  },
+  {
+   "fetch_from": "fabric_lot_no.item",
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-24 08:48:48.487895",
+ "modified": "2024-08-25 08:05:47.651507",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Greige Fabric Issuance Item",

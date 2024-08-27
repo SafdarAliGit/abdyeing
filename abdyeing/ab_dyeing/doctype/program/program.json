@@ -10,12 +10,19 @@
  "field_order": [
   "date",
   "program_no",
+  "service_item",
   "column_break_tkhma",
   "processes",
   "customer",
   "section_break_lec7y",
   "program_item",
-  "amended_from"
+  "section_break_q9ud8",
+  "amended_from",
+  "no_of_articles",
+  "column_break_qdrvj",
+  "instructions",
+  "column_break_4fuzk",
+  "total_meters"
  ],
  "fields": [
   {
@@ -63,12 +70,52 @@
   {
    "fieldname": "section_break_lec7y",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "service_item",
+   "fieldtype": "Link",
+   "label": "Service Item",
+   "options": "Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_meters",
+   "fieldtype": "Float",
+   "label": "Total Meters",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_q9ud8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "no_of_articles",
+   "fieldtype": "Data",
+   "label": "No Of Articles"
+  },
+  {
+   "fieldname": "column_break_qdrvj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instructions",
+   "fieldtype": "Data",
+   "label": "Instructions"
+  },
+  {
+   "fieldname": "column_break_4fuzk",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-08-24 08:41:37.396650",
+ "links": [
+  {
+   "link_doctype": "Greige Fabric Issuance",
+   "link_fieldname": "program_no"
+  }
+ ],
+ "modified": "2024-08-27 19:07:26.366098",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Program",

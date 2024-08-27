@@ -28,7 +28,8 @@
    "fieldname": "program_no",
    "fieldtype": "Link",
    "label": "Program No",
-   "options": "Program"
+   "options": "Program",
+   "read_only": 1
   },
   {
    "fieldname": "source_warehouse",
@@ -74,7 +75,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-24 09:06:15.824921",
+ "modified": "2024-08-27 19:02:55.351548",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Greige Fabric Issuance",
