@@ -16,6 +16,7 @@ class GreigeFabricIssuance(Document):
             it.item_code = item.item_code
             it.qty = item.qty_issue
             it.batch_no = item.fabric_lot_no
+            it.allow_zero_valuation_rate = 1
 
         try:
             se.submit()
