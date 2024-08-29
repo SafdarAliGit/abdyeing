@@ -28,7 +28,7 @@ class GreigeFabricIssuance(Document):
                 "t_warehouse": 'Work In Progress - ABD',
                 "item_code": item.item_code,
                 "qty": item.qty_issue,
-                "batch_no": item.batch_no_target if item.batch_no_target else None,
+                "batch_no": item.m_lot_no if item.m_lot_no else None,
                 "allow_zero_valuation_rate": 1
             })
         try:
