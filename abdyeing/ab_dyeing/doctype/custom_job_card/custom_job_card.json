@@ -8,35 +8,47 @@
  "engine": "InnoDB",
  "field_order": [
   "job_card_detail",
-  "lot_no",
-  "design_no",
-  "column_break_pecjs",
-  "completed_meters",
-  "shortage",
-  "column_break_ls9hm",
-  "status",
-  "process_route",
-  "column_break_h823d",
-  "program_no",
-  "amended_from",
-  "program_deital_section",
   "date",
-  "column_break_2yzck",
+  "column_break_bhbh7",
+  "kier_no",
+  "column_break_9nvh8",
+  "process_route",
+  "column_break_7c44t",
   "processes",
-  "column_break_vrmrd",
+  "greige_fabric_detail_section",
+  "m_lot_no",
+  "column_break_txyhc",
+  "quality",
+  "column_break_nplwz",
+  "construction",
+  "column_break_dzdvg",
+  "g_width",
+  "column_break_lcva4",
+  "f_width",
+  "column_break_fgsq1",
+  "available_qty",
+  "program_detail_section",
+  "program_no",
+  "column_break_flvqq",
+  "po_no",
+  "column_break_ls9hm",
   "customer",
-  "column_break_vxc4x",
-  "service_item",
+  "column_break_h823d",
+  "design_no",
+  "column_break_a95kf",
+  "program_qty",
+  "column_break_8txfm",
+  "completed_meters",
+  "column_break_u8qw9",
+  "shortage",
+  "column_break_orufc",
+  "status",
+  "column_break_nqfao",
+  "amended_from",
   "section_break_jam55",
   "custom_job_card_item"
  ],
  "fields": [
-  {
-   "fieldname": "lot_no",
-   "fieldtype": "Link",
-   "label": "Lot No",
-   "options": "Batch"
-  },
   {
    "fieldname": "design_no",
    "fieldtype": "Data",
@@ -97,10 +109,6 @@
    "label": "Job Card Detail"
   },
   {
-   "fieldname": "column_break_pecjs",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_ls9hm",
    "fieldtype": "Column Break"
   },
@@ -113,44 +121,138 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "program_deital_section",
-   "fieldtype": "Section Break",
-   "label": "Program Deital"
-  },
-  {
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date"
   },
   {
-   "fieldname": "column_break_2yzck",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_vrmrd",
-   "fieldtype": "Column Break"
-  },
-  {
+   "fetch_from": "program_no.customer",
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
    "options": "Customer"
   },
   {
-   "fieldname": "column_break_vxc4x",
+   "fieldname": "kier_no",
+   "fieldtype": "Data",
+   "label": "Kier No"
+  },
+  {
+   "fieldname": "m_lot_no",
+   "fieldtype": "Link",
+   "label": "M Lot No",
+   "options": "Batch"
+  },
+  {
+   "fetch_from": "m_lot_no.quality",
+   "fieldname": "quality",
+   "fieldtype": "Data",
+   "label": "Quality"
+  },
+  {
+   "fetch_from": "m_lot_no.item_name",
+   "fieldname": "construction",
+   "fieldtype": "Link",
+   "label": "Construction",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "m_lot_no.batch_qty",
+   "fieldname": "available_qty",
+   "fieldtype": "Float",
+   "label": "Available Qty"
+  },
+  {
+   "fieldname": "program_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Program Detail"
+  },
+  {
+   "fieldname": "greige_fabric_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Greige Fabric Detail"
+  },
+  {
+   "fieldname": "program_qty",
+   "fieldtype": "Float",
+   "label": "Program Qty"
+  },
+  {
+   "fieldname": "column_break_bhbh7",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "service_item",
-   "fieldtype": "Link",
-   "label": "Service Item",
-   "options": "Item"
+   "fieldname": "column_break_9nvh8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7c44t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_txyhc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nplwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dzdvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_a95kf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8txfm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_u8qw9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_orufc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nqfao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "label": "PO No"
+  },
+  {
+   "fieldname": "column_break_flvqq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "g_width",
+   "fieldtype": "Float",
+   "label": "G. Width"
+  },
+  {
+   "fieldname": "f_width",
+   "fieldtype": "Float",
+   "label": "F. Width"
+  },
+  {
+   "fieldname": "column_break_lcva4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fgsq1",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-29 06:22:28.975632",
+ "modified": "2024-08-30 00:38:48.726278",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Custom Job Card",
