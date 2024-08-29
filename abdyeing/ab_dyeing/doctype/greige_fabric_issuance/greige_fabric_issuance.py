@@ -36,7 +36,7 @@ class GreigeFabricIssuance(Document):
             for item in self.greige_fabric_issuance_item:
                 batch = frappe.get_doc("Batch", item.fabric_lot_no)
                 if batch:
-                    batch.m_lot_no = item.m_lot_no if item.m_lot_no else None
+                    batch.g_lot_no = item.fabric_lot_no if item.fabric_lot_no else None
                 batch.save()
 
         except Exception as e:
