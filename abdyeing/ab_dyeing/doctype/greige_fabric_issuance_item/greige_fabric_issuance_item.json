@@ -11,7 +11,8 @@
   "available_qty",
   "qty_issue",
   "uom",
-  "m_lot_no"
+  "m_lot_no",
+  "batch_no_target"
  ],
  "fields": [
   {
@@ -56,12 +57,19 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "M. Lot No"
+  },
+  {
+   "fieldname": "batch_no_target",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Batch No Target",
+   "options": "Batch"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-29 18:29:10.427310",
+ "modified": "2024-08-29 23:00:00.763901",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Greige Fabric Issuance Item",

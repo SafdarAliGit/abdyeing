@@ -75,8 +75,13 @@
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-08-29 20:10:21.013865",
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "ref_no"
+  }
+ ],
+ "modified": "2024-08-29 23:18:56.653829",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Greige Fabric Issuance",

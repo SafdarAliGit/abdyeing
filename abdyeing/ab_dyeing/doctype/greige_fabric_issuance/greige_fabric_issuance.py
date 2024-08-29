@@ -8,16 +8,29 @@ from frappe.model.document import Document
 class GreigeFabricIssuance(Document):
     def on_submit(self):
         se = frappe.new_doc("Stock Entry")
-        se.stock_entry_type = 'Material Transfer'
+        se.stock_entry_type = "Repack"
+        se.purpose = "Repack"
+        se.posting_date = self.date
+        source_warehouse = self.source_warehouse
+        se.ref_doctype = 'Greige Fabric Issuance'
+        se.ref_no =  self.name
         for item in self.greige_fabric_issuance_item:
-            it = se.append("items", {})
-            it.s_warehouse = self.source_warehouse
-            it.t_warehouse = 'Work In Progress - ABD'
-            it.item_code = item.item_code
-            it.qty = item.qty_issue
-            it.batch_no = item.fabric_lot_no
-            it.allow_zero_valuation_rate = 1
-
+            se.append("items", {
+                "s_warehouse": source_warehouse,
+                "t_warehouse": "",
+                "item_code": item.item_code,
+                "qty": item.qty_issue,
+                "batch_no": item.fabric_lot_no if item.fabric_lot_no else None,
+                "allow_zero_valuation_rate": 1
+            })
+            se.append("items", {
+                "s_warehouse": "",
+                "t_warehouse": 'Work In Progress - ABD',
+                "item_code": item.item_code,
+                "qty": item.qty_issue,
+                "batch_no": item.batch_no_target if item.batch_no_target else None,
+                "allow_zero_valuation_rate": 1
+            })
         try:
             se.submit()
             for item in self.greige_fabric_issuance_item:
