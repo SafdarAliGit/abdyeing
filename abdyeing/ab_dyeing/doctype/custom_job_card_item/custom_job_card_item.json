@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-29 06:04:08.489049",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "article_no",
+  "volume",
+  "brand",
+  "po_no",
+  "cw_app",
+  "pcs",
+  "quality",
+  "construction",
+  "qty",
+  "meters",
+  "remarks",
+  "copies",
+  "g_width",
+  "f_width",
+  "consumption",
+  "variants"
+ ],
+ "fields": [
+  {
+   "fieldname": "article_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Article No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "volume",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Volume",
+   "read_only": 1
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Brand",
+   "options": "Brand",
+   "read_only": 1
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PO #",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cw_app",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "C.W App",
+   "options": "\ncolor way1\ncolor way2\ncolor way3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pcs",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Pcs",
+   "options": "\n1pcs\n2pcs\n3pcs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Quality",
+   "options": "\nCotton\nViscose",
+   "read_only": 1
+  },
+  {
+   "fieldname": "construction",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Construction",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "meters",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Meters",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remarks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "copies",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Copies",
+   "read_only": 1
+  },
+  {
+   "fieldname": "g_width",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "G. Width",
+   "read_only": 1
+  },
+  {
+   "fieldname": "f_width",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "F. Width",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consumption",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Consumption",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variants",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variants",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-29 06:06:31.583524",
+ "modified_by": "Administrator",
+ "module": "AB Dyeing",
+ "name": "Custom Job Card Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

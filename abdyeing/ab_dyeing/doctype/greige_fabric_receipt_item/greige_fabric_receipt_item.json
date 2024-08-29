@@ -12,7 +12,9 @@
   "lot_no",
   "no_of_bales",
   "meter",
-  "uom"
+  "uom",
+  "construction",
+  "greige_width"
  ],
  "fields": [
   {
@@ -54,12 +56,24 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "UOM"
+  },
+  {
+   "fieldname": "construction",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Construction"
+  },
+  {
+   "fieldname": "greige_width",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Greige Width"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-25 14:44:27.173515",
+ "modified": "2024-08-29 18:46:28.640635",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Greige Fabric Receipt Item",

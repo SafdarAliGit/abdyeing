@@ -31,5 +31,12 @@ class GreigeFabricReceipt(Document):
             sle_obj = frappe.get_doc('Stock Ledger Entry', sle[0]['name'])
             sle_obj.customer = self.customer
             sle_obj.save()
+            for item in self.greige_fabric_receipt_item:
+                batch = frappe.get_doc("Batch", item.lot_no)
+                if batch:
+                    batch.quality = item.quality if item.quality else None
+                    batch.construction = item.construction if item.construction else None
+                    batch.greige_width = item.greige_width if item.greige_width else None
+                batch.save()
         except Exception as e:
             frappe.throw(str(e))

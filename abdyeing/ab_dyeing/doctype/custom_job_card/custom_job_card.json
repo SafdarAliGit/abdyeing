@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-29 06:01:46.362244",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_card_detail",
+  "lot_no",
+  "design_no",
+  "column_break_pecjs",
+  "completed_meters",
+  "shortage",
+  "column_break_ls9hm",
+  "status",
+  "process_route",
+  "column_break_h823d",
+  "program_no",
+  "amended_from",
+  "program_deital_section",
+  "date",
+  "column_break_2yzck",
+  "processes",
+  "column_break_vrmrd",
+  "customer",
+  "column_break_vxc4x",
+  "service_item",
+  "section_break_jam55",
+  "custom_job_card_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "lot_no",
+   "fieldtype": "Link",
+   "label": "Lot No",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "design_no",
+   "fieldtype": "Data",
+   "label": "Design No"
+  },
+  {
+   "fieldname": "completed_meters",
+   "fieldtype": "Float",
+   "label": "Completed Meters"
+  },
+  {
+   "fieldname": "shortage",
+   "fieldtype": "Float",
+   "label": "Shortage"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nProcess\nCompleted"
+  },
+  {
+   "fieldname": "process_route",
+   "fieldtype": "Select",
+   "label": "Process Route",
+   "options": "\nDying\nPrinting"
+  },
+  {
+   "fieldname": "processes",
+   "fieldtype": "Link",
+   "label": "Processes",
+   "options": "Operation"
+  },
+  {
+   "fieldname": "program_no",
+   "fieldtype": "Link",
+   "label": "Program No",
+   "options": "Program"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Custom Job Card",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "custom_job_card_item",
+   "fieldtype": "Table",
+   "label": "Custom Job Card Item",
+   "options": "Custom Job Card Item"
+  },
+  {
+   "fieldname": "job_card_detail",
+   "fieldtype": "Section Break",
+   "label": "Job Card Detail"
+  },
+  {
+   "fieldname": "column_break_pecjs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ls9hm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jam55",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_h823d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_deital_section",
+   "fieldtype": "Section Break",
+   "label": "Program Deital"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_2yzck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vrmrd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_vxc4x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_item",
+   "fieldtype": "Link",
+   "label": "Service Item",
+   "options": "Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-29 06:22:28.975632",
+ "modified_by": "Administrator",
+ "module": "AB Dyeing",
+ "name": "Custom Job Card",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
