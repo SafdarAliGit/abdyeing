@@ -60,6 +60,7 @@
   {
    "fieldname": "processes",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Processes",
    "options": "Operation"
   },
@@ -115,7 +116,7 @@
    "link_fieldname": "program_no"
   }
  ],
- "modified": "2024-08-27 19:07:26.366098",
+ "modified": "2024-08-29 20:12:10.135241",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Program",

@@ -3,6 +3,14 @@
 
 frappe.ui.form.on('Program', {
     refresh: function (frm) {
+         frm.fields_dict['service_item'].get_query = function(doc) {
+            return {
+                      filters: [
+                     ["Item", "item_group", "=", "Service"]
+                ]
+
+            };
+        };
         frm.set_query('construction', 'program_item', function (doc, cdt, cdn) {
             return {
                 filters: [
