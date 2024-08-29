@@ -17,6 +17,7 @@ class GreigeFabricReceipt(Document):
             it.item_code = item.fabric_item
             it.qty = item.meter
             it.batch_no = item.lot_no
+            it.allow_zero_valuation_rate = 1
 
         try:
             se.submit()
