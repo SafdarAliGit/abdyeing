@@ -55,6 +55,7 @@
   {
    "fieldname": "m_lot_no",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "M. Lot No",
    "options": "Batch",
@@ -70,7 +71,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-30 17:19:11.689498",
+ "modified": "2024-08-30 17:26:29.401037",
  "modified_by": "Administrator",
  "module": "AB Dyeing",
  "name": "Greige Fabric Issuance Item",
