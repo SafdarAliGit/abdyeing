@@ -40,6 +40,7 @@ frappe.ui.form.on('Greige Fabric Issuance Item', {
                 }
             });
             frappe.model.set_value(cdt, cdn, 'm_lot_no', d.new_lot_no);
+            frappe.show_alert(`Batch ${d.new_lot_no} created`);
         }else {
             frappe.throw("Provide Row values");
         }
