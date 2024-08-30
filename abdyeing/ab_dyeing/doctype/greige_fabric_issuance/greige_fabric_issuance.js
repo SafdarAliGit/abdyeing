@@ -24,7 +24,27 @@ frappe.ui.form.on('Greige Fabric Issuance Item', {
     },
     qty_issue: function (frm, cdt, cdn) {
         calculate_total(frm);
+    },
+    new_lot_no: function (frm, cdt, cdn) {
+        var d = locals[cdt][cdn];
+        if (d.item_code && d.new_lot_no && d.qty_issue) {
+            frappe.call({
+                method: 'frappe.client.insert',
+                args: {
+                    doc: {
+                        doctype: 'Batch',
+                        item: d.item_code,
+                        batch_id: d.new_lot_no,
+                        batch_qty: d.qty_issue
+                    }
+                }
+            });
+            frappe.model.set_value(cdt, cdn, 'm_lot_no', d.new_lot_no);
+        }else {
+            frappe.throw("Provide Row values");
+        }
     }
+
 });
 
 function calculate_total(frm) {
