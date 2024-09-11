@@ -1,0 +1,404 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-11 16:55:32.416050",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "m_book_no",
+  "column_break_rb6z8",
+  "posting_date",
+  "column_break_tvjh6",
+  "component",
+  "column_break_utzwb",
+  "party_name",
+  "section_break_4likd",
+  "program",
+  "column_break_wqcn5",
+  "brand_name",
+  "amended_from",
+  "column_break_gb5ck",
+  "processes",
+  "column_break_vwvyo",
+  "kier_no",
+  "section_break_zr3mb",
+  "greige_lot_no",
+  "total_meters",
+  "item_detail_section_section",
+  "fresh_qty",
+  "column_break_h2ajm",
+  "fresh",
+  "column_break_oihz8",
+  "b_grade_qty",
+  "column_break_lxavj",
+  "b_grade",
+  "column_break_ylyyf",
+  "cp_qty",
+  "column_break_guhwf",
+  "cp",
+  "column_break_yi3vm",
+  "pao_pona",
+  "column_break_al6fn",
+  "sample",
+  "column_break_etrnn",
+  "finshed_goods",
+  "column_break_a0nkn",
+  "rate",
+  "section_break_rvtkm",
+  "dispatch_date",
+  "column_break_x8no6",
+  "gate_pass",
+  "column_break_yh9zl",
+  "bility",
+  "transpoter_details_section",
+  "vehicle",
+  "column_break_frfbm",
+  "driver_name",
+  "column_break_hrbby",
+  "short_gain_qty",
+  "column_break_hx9f0",
+  "short_gain",
+  "summary_section_section",
+  "total_amount",
+  "column_break_rhn4l",
+  "claim_qty",
+  "column_break_zas0w",
+  "claim_rate",
+  "column_break_ucdxd",
+  "claim_amount",
+  "column_break_vll4o",
+  "net_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "m_book_no",
+   "fieldtype": "Data",
+   "label": "M Book No"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "component",
+   "fieldtype": "Data",
+   "label": "Component"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program"
+  },
+  {
+   "fetch_from": "program.service_item",
+   "fieldname": "brand_name",
+   "fieldtype": "Data",
+   "label": "Brand Name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sale Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "program.processes",
+   "fieldname": "processes",
+   "fieldtype": "Data",
+   "label": "Processes"
+  },
+  {
+   "fieldname": "kier_no",
+   "fieldtype": "Link",
+   "label": "Kier No",
+   "options": "Kier"
+  },
+  {
+   "fieldname": "greige_lot_no",
+   "fieldtype": "Table",
+   "label": "Greige Lot No",
+   "options": "Greige Lot No"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_meters",
+   "fieldtype": "Float",
+   "label": "Total Meters",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rb6z8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tvjh6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_utzwb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4likd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wqcn5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gb5ck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zr3mb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vwvyo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_detail_section_section",
+   "fieldtype": "Section Break",
+   "label": "Item Detail Section"
+  },
+  {
+   "fieldname": "fresh_qty",
+   "fieldtype": "Float",
+   "label": "Fresh Qty"
+  },
+  {
+   "fieldname": "b_grade_qty",
+   "fieldtype": "Float",
+   "label": "B Grade Qty"
+  },
+  {
+   "fieldname": "fresh",
+   "fieldtype": "Float",
+   "label": "Fresh %"
+  },
+  {
+   "fieldname": "b_grade",
+   "fieldtype": "Float",
+   "label": "B grade %"
+  },
+  {
+   "fieldname": "cp_qty",
+   "fieldtype": "Float",
+   "label": "CP Qty"
+  },
+  {
+   "fieldname": "cp",
+   "fieldtype": "Float",
+   "label": "CP %"
+  },
+  {
+   "fieldname": "pao_pona",
+   "fieldtype": "Float",
+   "label": "Pao Pona"
+  },
+  {
+   "fieldname": "sample",
+   "fieldtype": "Float",
+   "label": "Sample"
+  },
+  {
+   "fieldname": "finshed_goods",
+   "fieldtype": "Float",
+   "label": "Finshed Goods"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_guhwf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_rvtkm",
+   "fieldtype": "Section Break",
+   "label": "Delivery Details"
+  },
+  {
+   "fieldname": "column_break_h2ajm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_oihz8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lxavj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ylyyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yi3vm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_al6fn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_etrnn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_a0nkn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "dispatch_date",
+   "fieldtype": "Date",
+   "label": "Dispatch Date"
+  },
+  {
+   "fieldname": "gate_pass",
+   "fieldtype": "Data",
+   "label": "Gate Pass"
+  },
+  {
+   "fieldname": "bility",
+   "fieldtype": "Data",
+   "label": "Bility #"
+  },
+  {
+   "fieldname": "column_break_x8no6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yh9zl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transpoter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transpoter Details"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Data",
+   "label": "Vehicle #"
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fieldname": "short_gain_qty",
+   "fieldtype": "Float",
+   "label": "Short \\ Gain Qty"
+  },
+  {
+   "fieldname": "short_gain",
+   "fieldtype": "Float",
+   "label": "Short \\ Gain %"
+  },
+  {
+   "fieldname": "column_break_frfbm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hrbby",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hx9f0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "summary_section_section",
+   "fieldtype": "Section Break",
+   "label": "Summary Section"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "claim_qty",
+   "fieldtype": "Float",
+   "label": "Claim Qty"
+  },
+  {
+   "fieldname": "claim_rate",
+   "fieldtype": "Currency",
+   "label": "Claim Rate"
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Currency",
+   "label": "Claim Amount"
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total"
+  },
+  {
+   "fieldname": "column_break_rhn4l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zas0w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ucdxd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vll4o",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-11 18:24:29.092498",
+ "modified_by": "Administrator",
+ "module": "AB Dyeing",
+ "name": "Sale Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

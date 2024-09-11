@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-11 16:34:06.143218",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lot_no",
+  "quality",
+  "item_name",
+  "meter"
+ ],
+ "fields": [
+  {
+   "fieldname": "lot_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lot no",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Quality"
+  },
+  {
+   "fetch_from": "lot_no.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "options": "Item"
+  },
+  {
+   "fieldname": "meter",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Meter"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-11 17:19:01.772155",
+ "modified_by": "Administrator",
+ "module": "AB Dyeing",
+ "name": "Greige Lot No",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
